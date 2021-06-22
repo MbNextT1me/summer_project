@@ -1,1 +1,1 @@
-# hotel-website
+# Website for the hotel «Lesnoe»
