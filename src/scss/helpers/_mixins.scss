@@ -1,0 +1,112 @@
+@mixin border($width, $style: solid, $color: transparent, $border-radius: 0) {
+	border-color: $color;
+	border-style: $style;
+	border-width: $width;
+	border-radius: $border-radius;
+}
+
+@mixin fade($type) {
+	@if $type == 'hide' {
+		visibility: hidden;
+		opacity: 0;
+	} @else if $type == 'show' {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@mixin flex-dir($flex-direction) {
+	display: flex;
+	flex-direction: $flex-direction;
+}
+
+@mixin flex-pos($justify-content, $align-items) {
+	display: flex;
+	align-items: $align-items;
+	justify-content: $justify-content;
+}
+
+@mixin font(
+	$font-family: $font-family-primary,
+	$font-weight: get-font-weight('normal'),
+	$font-size: $font-size-base,
+	$font-style: normal,
+	$font-color: get-theme-color('primary'),
+	$line-height: get-line-height('base')
+) {
+	color: $font-color;
+	font-weight: $font-weight;
+	font-size: $font-size;
+	font-family: $font-family;
+	font-style: $font-style;
+	line-height: $line-height;
+}
+
+@mixin position(
+	$position,
+	$top: false,
+	$right: false,
+	$bottom: false,
+	$left: false
+) {
+	position: $position;
+	@if $top {
+		top: $top;
+	}
+	@if $right {
+		right: $right;
+	}
+	@if $bottom {
+		bottom: $bottom;
+	}
+	@if $left {
+		left: $left;
+	}
+}
+
+@mixin absolute($args...) {
+	@include position(absolute, $args...);
+}
+
+@mixin relative($args...) {
+	@include position(relative, $args...);
+}
+
+@mixin fixed($args...) {
+	@include position(fixed, $args...);
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Translate
+@mixin translate($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// Skew
+@mixin skew($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin($origin) {
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}

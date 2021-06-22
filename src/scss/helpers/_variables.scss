@@ -1,0 +1,33 @@
+$theme-colors: (
+	'primary': #000,
+	'secondary': #000,
+	'white': #000,
+);
+
+$font-family-primary: 'Cantarell', sans-serif;
+
+$font-size-base: 1rem;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-lg: $font-size-base * 1.25;
+
+$font-weight: (
+	'normal': 400,
+	'bold': 700,
+);
+
+$line-height: (
+	'base': 1,
+	'small': 1.25,
+	'large': 2,
+);
+
+$font-size-headings: (
+	h1: $font-size-base * 4,
+	h2: $font-size-base * 3,
+	h3: $font-size-base * 2,
+	h4: $font-size-base * 1.5,
+	h5: $font-size-base * 1.25,
+	h6: $font-size-base,
+);
+
+$transition-time: 0.2s;
