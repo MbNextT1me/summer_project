@@ -1,6 +1,3 @@
-@import './helpers/variables';
-@import './helpers/functions';
-@import './helpers/mixins';
-@import 'base/base';
-@import 'layout/**/*';
-@import 'layout/components/**/*';
+@import './_inherit';
+@import './components/**/*';
+@import './common/header';

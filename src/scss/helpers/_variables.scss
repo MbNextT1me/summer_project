@@ -1,17 +1,25 @@
+$white: #fff;
+$black: #000;
+
 $theme-colors: (
 	'primary': #000,
 	'secondary': #000,
-	'white': #000,
 );
 
-$font-family-primary: 'Cantarell', sans-serif;
+$colors: (
+	'white': $white,
+	'black': $black,
+);
 
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'BebasNeue', sans-serif;
 $font-size-base: 1rem;
 $font-size-sm: $font-size-base * 0.875;
 $font-size-lg: $font-size-base * 1.25;
 
 $font-weight: (
 	'normal': 400,
+	'medium': 500,
 	'bold': 700,
 );
 
