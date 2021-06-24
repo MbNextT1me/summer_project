@@ -1,0 +1,18 @@
+
+mixin phone(phoneNumber)
+	.header__phone
+		h3.header__title= phoneNumber
+
+mixin navItem(content)
+	a(class="clean-link user-select-none header__link", href="#")&attributes(attributes)
+		h3.header__title= content
+
+.header
+	.container
+		.header__inner
+			nav.header__nav
+				+navItem('об отеле')
+				+navItem('номера и цены')
+				+navItem('мероприятия')
+				+navItem('контакты')
+				+phone('+7(495)005-61-59')

@@ -1,3 +1,8 @@
+@mixin box($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
 @mixin border($width, $style: solid, $color: transparent, $border-radius: 0) {
 	border-color: $color;
 	border-style: $style;
