@@ -1,5 +1,5 @@
 {
-	"validateAttributeQuoteMarks": "\"",
+	"validateAttributeQuoteMarks": "'",
 	"validateAttributeSeparator": {
 		"separator": ", ",
 		"multiLineSeparator": "\n "

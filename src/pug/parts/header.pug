@@ -1,11 +1,12 @@
+- const navItemBaseClasses = ['clean-link', 'user-select-none', 'header__link']
 
 mixin phone(phoneNumber)
 	.header__phone
-		h3.header__title= phoneNumber
+		h3(class='title')= phoneNumber
 
 mixin navItem(content)
-	a(class="clean-link user-select-none header__link", href="#")&attributes(attributes)
-		h3.header__title= content
+	a(class=navItemBaseClasses, href='#')&attributes(attributes)
+		h3(class='title header__title')= content
 
 .header
 	.container

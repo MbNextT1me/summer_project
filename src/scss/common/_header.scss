@@ -16,10 +16,6 @@
 	&__title {
 		position: relative;
 
-		margin: 0;
-
-		font-weight: inherit;
-
 		&::after {
 			@include absolute(115%, 100%, 0%, 50%);
 
