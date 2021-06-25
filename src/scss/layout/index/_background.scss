@@ -1,0 +1,46 @@
+.main {
+	@include box(100%, 100vh);
+	overflow: hidden;
+
+	&__inner {
+		@include relative();
+
+		@include box(100%);
+
+		&::before {
+			@include absolute();
+
+			@include box(inherit);
+
+			background: center / cover no-repeat
+				url('../img/index/index-bg.jpg');
+			filter: grayscale(100%);
+
+			content: '';
+		}
+	}
+}
+
+.media {
+	max-width: 96.5rem;
+	max-height: 118.6rem;
+
+	mix-blend-mode: darken;
+
+	&,
+	&__video,
+	&__img {
+		@include absolute();
+		@include box(100%);
+	}
+
+	&__video {
+		object-fit: cover;
+	}
+
+	&__img {
+		object-fit: cover;
+
+		mix-blend-mode: screen;
+	}
+}
