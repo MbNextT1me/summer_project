@@ -10,6 +10,7 @@ const config = {
 		fonts: `${srcPath}/assets/fonts/**/*.+(eot|svg|ttf|woff|woff2|css)`,
 		img: `${srcPath}/assets/img/**/*.+(png|jpg|svg|webp)`,
 		icons: `${srcPath}/assets/icons`,
+		video: `${srcPath}/assets/video/**/*`,
 	},
 	dest: {
 		root: destPath,
@@ -19,6 +20,7 @@ const config = {
 		fonts: `${destPath}/fonts`,
 		img: `${destPath}/img`,
 		icons: `${destPath}/icons`,
+		video: `${destPath}/video`,
 	},
 	setEnv() {
 		this.isProd = process.argv.includes('--prod');
