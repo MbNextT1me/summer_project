@@ -9,7 +9,8 @@
 	}
 
 	&__wrapper {
-		position: relative;
+		@include relative(0, -5.3%);
+
 		@include flex-pos(center, normal);
 		flex-direction: column;
 
