@@ -15,8 +15,9 @@ $BebasNeueNotCyrillic: 'BebasNeue', sans-serif;
 $BebasNeueBook: 'BebasNeueBook', sans-serif;
 
 $font-size-base: 1rem;
-$font-size-sm: $font-size-base * 0.875;
-$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * 1.25;
+$font-size-md: $font-size-base * 1.75;
+$font-size-lg: $font-size-base * 4;
 
 $font-weight: (
 	'normal': 400,
@@ -27,7 +28,7 @@ $font-weight: (
 $line-height: (
 	'base': 1,
 	'small': 1.25,
-	'large': 2,
+	'large': 1.6,
 );
 
 $font-size-headings: (
