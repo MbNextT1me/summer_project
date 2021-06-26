@@ -23,10 +23,12 @@
 @mixin flex-dir($flex-direction) {
 	display: flex;
 	flex-direction: $flex-direction;
+	flex-wrap: wrap;
 }
 
 @mixin flex-pos($justify-content, $align-items) {
 	display: flex;
+	flex-wrap: wrap;
 	align-items: $align-items;
 	justify-content: $justify-content;
 }

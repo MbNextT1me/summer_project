@@ -1,0 +1,71 @@
+.description {
+	margin-top: 6rem;
+
+	@include font();
+	font-weight: 500;
+
+	&__inner {
+		@include flex-pos(flex-end, normal);
+	}
+
+	&__wrapper {
+		position: relative;
+		@include flex-pos(center, normal);
+		flex-direction: column;
+
+		width: 100%;
+		max-width: 50%;
+
+		padding-left: 5rem;
+
+		&::before {
+			position: absolute;
+			left: 0;
+
+			width: 2.4rem;
+			height: 23.7rem;
+
+			background: center / contain no-repeat
+				url(../img/index/info-border.png);
+
+			content: '';
+		}
+	}
+
+	&__info {
+		width: 100%;
+		max-width: 33rem;
+
+		margin: 0;
+		padding-top: 1rem;
+
+		font-size: $font-size-md;
+		line-height: get-line-height('large');
+	}
+
+	&__price {
+		@include flex-dir(column);
+
+		color: get-theme-color('secondary');
+		font-size: $font-size-md;
+	}
+}
+
+//SPAN
+.center {
+	@include relative(0, -0.5%);
+
+	margin: 0.8rem 0;
+
+	font-size: $font-size-lg;
+
+	&::after {
+		margin-left: 0.5rem;
+
+		content: '\20BD';
+	}
+}
+
+.down {
+	@include relative(0, -12%);
+}
