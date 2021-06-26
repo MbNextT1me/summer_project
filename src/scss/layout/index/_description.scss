@@ -9,7 +9,7 @@
 	}
 
 	&__wrapper {
-		@include relative(0, -5.3%);
+		@include relative(0, -10rem);
 
 		@include flex-pos(center, normal);
 		flex-direction: column;
@@ -54,9 +54,9 @@
 
 //SPAN
 .center {
-	@include relative(0, -0.5%);
+	@include relative(0, -1.5rem);
 
-	margin: 0.8rem 0;
+	margin: 0.5rem 0;
 
 	font-size: $font-size-lg;
 
@@ -68,5 +68,5 @@
 }
 
 .down {
-	@include relative(0, -12%);
+	@include relative(0, -10rem);
 }

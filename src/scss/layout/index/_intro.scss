@@ -11,15 +11,15 @@
 	}
 
 	&__suptitle {
-		@include relative(0, 3%);
+		@include relative(0, 2.5rem);
 	}
 
 	&__title {
-		@include relative(0, 10%);
+		@include relative(0, 9rem);
 	}
 
 	&__subtitle {
-		@include relative(0, -12%);
+		@include relative(0, -11.5rem);
 	}
 
 	&__title svg {
