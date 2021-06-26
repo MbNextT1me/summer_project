@@ -1,7 +1,4 @@
 .header {
-	position: fixed;
-	z-index: 10000;
-
 	width: 100%;
 	max-width: 100%;
 
@@ -14,7 +11,8 @@
 	}
 
 	&__nav {
-		width: 50%;
+		width: 100%;
+		max-width: 50%;
 		@include flex-pos(space-between, center);
 	}
 

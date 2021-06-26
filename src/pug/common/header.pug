@@ -2,11 +2,11 @@
 
 mixin phone(phoneNumber)
 	.header__phone
-		h3(class='title')= phoneNumber
+		h3.title= phoneNumber
 
 mixin navItem(content)
 	a(class=navItemBaseClasses, href='#')&attributes(attributes)
-		h3(class='title header__title')= content
+		h3.title.header__title= content
 
 .header
 	.container

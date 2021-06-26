@@ -1,10 +1,30 @@
+.page {
+	@include relative();
+
+	@include box(100%, 100vh);
+
+	overflow: hidden;
+
+	&::before {
+		@include absolute(0, 0, 0, 0);
+		z-index: -1;
+
+		@include box(inherit);
+
+		background: center / cover no-repeat url('../img/index/index-bg.jpg');
+		filter: grayscale(100%);
+
+		content: '';
+	}
+}
+
 .container {
 	width: 100%;
 	max-width: 192rem;
 
 	margin: 0 auto;
 
-	padding: 0 3rem;
+	padding-right: 3rem;
 }
 
 .clean-link {

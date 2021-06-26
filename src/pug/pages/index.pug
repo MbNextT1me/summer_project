@@ -1,5 +1,11 @@
-main.main
-	.main__inner
-		.deer
-			video.deer__video(src='video/index-bg.mp4', autoplay, loop, muted)
-			+img('img/index/deer.jpg').deer__img
+section.intro
+	.container
+		.intro__inner
+			.intro__wrapper
+				h2.title.intro__suptitle отель-заповедник
+				.intro__title
+					+icon-multi('title')
+				h1.title.intro__subtitle премиальный отдых в подмосковье
+section.deer
+	video.deer__video(src='video/index-bg.mp4', autoplay, loop, muted)
+	+img('img/index/deer.jpg').deer__img

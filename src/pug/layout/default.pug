@@ -6,13 +6,14 @@ html(lang='en')
 		include ../common/head.pug
 
 	body
-		block header
-			include ../common/header.pug
+		.page
+			block header
+				include ../common/header.pug
 
-		block content
+			block content
 
-		block footer
-			include ../common/footer.pug
+			block footer
+				include ../common/footer.pug
 
 		block scripts
 			script(src='js/main.js')
