@@ -1,13 +1,17 @@
 .deer {
-	max-width: 96.5rem;
-	max-height: 118.6rem;
+	width: 96.5rem;
+	height: 118.6rem;
 
 	mix-blend-mode: darken;
 
 	&,
 	&__video,
 	&__img {
-		@include absolute();
+		@include absolute(0, 0, 0, 0);
+	}
+
+	&__video,
+	&__img {
 		@include box(100%);
 	}
 
