@@ -1,32 +1,36 @@
-.intro {
-	@include font($BebasNeueBook);
+//.intro {
+//	@include font($BebasNeueBook);
 
-	&__inner {
-		@include flex-pos(flex-end, normal);
-	}
+//	&__inner {
+//		@include flex-pos(flex-end, normal);
+//	}
 
-	&__wrapper {
-		width: 100%;
-		max-width: 50%;
-	}
+//	&__wrapper {
+//		width: 100%;
+//		max-width: 50%;
+//	}
 
-	&__suptitle {
-		@include relative(0, 2.5rem);
-	}
+//	&__suptitle {
+//		@include relative(0, 2.5rem);
+//	}
 
-	&__title {
-		@include relative(0, 9rem);
-	}
+//	&__title {
+//		@include box(100%);
 
-	&__subtitle {
-		@include relative(0, -11.5rem);
-	}
+//		margin-top: 1.5rem;
+//		margin-bottom: 3.5rem;
 
-	&__title svg {
-		width: 81.6rem;
-		height: 33.1rem;
+//		@include relative(0, 9rem);
+//	}
 
-		margin-top: 1.5rem;
-		margin-bottom: 3.5rem;
-	}
-}
+//	&__subtitle {
+//		padding-left: 11.5rem;
+//	}
+
+//	&__title svg {
+//		@include box(inherit);
+
+//		max-width: 81.6rem;
+//		max-height: 33.1rem;
+//	}
+//}

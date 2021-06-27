@@ -1,27 +1,27 @@
-.deer {
-	width: 96.5rem;
-	height: 118.6rem;
+//.deer {
+//	width: 96.5rem;
+//	height: 118.6rem;
 
-	mix-blend-mode: darken;
+//	mix-blend-mode: darken;
 
-	&,
-	&__video,
-	&__img {
-		@include absolute(0, 0, 0, 0);
-	}
+//	&,
+//	&__video,
+//	&__img {
+//		@include absolute(0, 0, 0, 0);
+//	}
 
-	&__video,
-	&__img {
-		@include box(100%);
-	}
+//	&__video,
+//	&__img {
+//		@include box(100%);
+//	}
 
-	&__video {
-		object-fit: cover;
-	}
+//	&__video {
+//		object-fit: cover;
+//	}
 
-	&__img {
-		object-fit: cover;
+//	&__img {
+//		object-fit: cover;
 
-		mix-blend-mode: screen;
-	}
-}
+//		mix-blend-mode: screen;
+//	}
+//}

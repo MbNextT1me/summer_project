@@ -1,50 +1,52 @@
-.header {
-	width: 100%;
-	max-width: 100%;
+//.header {
+//	width: 100%;
+//	max-width: 100%;
 
-	@include font($font-family-secondary);
-	text-transform: uppercase;
+//	@include font($font-family-secondary);
+//	position: relative;
+//	z-index: 30000;
+//	text-transform: uppercase;
 
-	&__inner {
-		@include flex-pos(flex-end, normal);
-		padding: 2.5rem 0;
-	}
+//	&__inner {
+//		@include flex-pos(flex-end, normal);
+//		padding: 2.5rem 0;
+//	}
 
-	&__nav {
-		width: 100%;
-		max-width: 50%;
-		@include flex-pos(space-between, center);
-	}
+//	&__nav {
+//		width: 100%;
+//		max-width: 50%;
+//		@include flex-pos(space-between, center);
+//	}
 
-	&__title {
-		position: relative;
+//	&__title {
+//		position: relative;
 
-		&::after {
-			@include absolute(115%, 100%, 0%, 50%);
+//		&::after {
+//			@include absolute(115%, 100%, 0%, 50%);
 
-			@include box(0%, 0.4rem);
+//			@include box(0%, 0.4rem);
 
-			background-color: $green;
+//			background-color: $green;
 
-			transition: all $transition-time ease-in-out;
+//			transition: all $transition-time ease-in-out;
 
-			content: '';
-		}
-	}
+//			content: '';
+//		}
+//	}
 
-	&__link:hover &__title::after {
-		left: 0;
+//	&__link:hover &__title::after {
+//		left: 0;
 
-		width: 100%;
-	}
+//		width: 100%;
+//	}
 
-	&__phone {
-		padding: 1rem;
+//	&__phone {
+//		padding: 1rem;
 
-		font-family: $BebasNeueNotCyrillic;
+//		font-family: $BebasNeueNotCyrillic;
 
-		cursor: pointer;
+//		cursor: pointer;
 
-		@include border(0.1rem, solid, get-theme-color('secondary'), 1rem);
-	}
-}
+//		@include border(0.1rem, solid, get-theme-color('secondary'), 1rem);
+//	}
+//}

@@ -17,7 +17,7 @@ $BebasNeueBook: 'BebasNeueBook', sans-serif;
 $font-size-base: 1rem;
 $font-size-sm: $font-size-base * 1.25;
 $font-size-md: $font-size-base * 1.75;
-$font-size-lg: $font-size-base * 4;
+$font-size-lg: $font-size-base * 2.75;
 
 $font-weight: (
 	'normal': 400,
@@ -32,9 +32,9 @@ $line-height: (
 );
 
 $font-size-headings: (
-	h1: $font-size-base * 4.8,
-	h2: $font-size-base * 2.8,
-	h3: $font-size-base * 1.8,
+	h1: $font-size-base * 4.5,
+	h2: $font-size-base * 2.5,
+	h3: $font-size-base * 2,
 	h4: $font-size-base * 1.5,
 	h5: $font-size-base * 1.25,
 	h6: $font-size-base,
