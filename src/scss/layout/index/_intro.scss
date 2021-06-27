@@ -2,13 +2,14 @@
 	padding-top: $header-height;
 
 	&__inner {
-		position: absolute;
-		right: 0;
-
 		width: 100%;
 		max-width: 50%;
 
 		font-family: $BebasNeueBook;
+	}
+
+	&__wrapper {
+		@include flex-pos(flex-end, normal);
 	}
 
 	&__title {
@@ -25,40 +26,3 @@
 		padding-left: 11.5rem;
 	}
 }
-
-//.intro {
-//	@include font($BebasNeueBook);
-
-//	&__inner {
-//		@include flex-pos(flex-end, normal);
-//	}
-
-//	&__wrapper {
-//		width: 100%;
-//		max-width: 50%;
-//	}
-
-//	&__suptitle {
-//		@include relative(0, 2.5rem);
-//	}
-
-//	&__title {
-//		@include box(100%);
-
-//		margin-top: 1.5rem;
-//		margin-bottom: 3.5rem;
-
-//		@include relative(0, 9rem);
-//	}
-
-//	&__subtitle {
-//		padding-left: 11.5rem;
-//	}
-
-//	&__title svg {
-//		@include box(inherit);
-
-//		max-width: 81.6rem;
-//		max-height: 33.1rem;
-//	}
-//}

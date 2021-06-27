@@ -30,6 +30,10 @@
 	user-select: none;
 }
 
+.flex-end-wrapper {
+	@include flex-pos(flex-end, normal);
+}
+
 .clean {
 	&-link {
 		&,

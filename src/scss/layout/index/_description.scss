@@ -1,78 +1,75 @@
-//.description {
-//	margin-top: 6rem;
+.description {
+	margin-top: $intro-img-mg-bottom;
 
-//	@include font();
-//	font-weight: 500;
+	.flex-end-wrapper {
+		padding-left: 30rem;
+	}
 
-//	&__inner {
-//		@include flex-pos(flex-end, normal);
+	&__inner {
+		position: relative;
 
-//		padding-left: 20rem;
-//	}
+		@include flex-pos(center, normal);
+		flex-direction: column;
 
-//	&__wrapper {
-//		position: relative;
-//		//@include relative(0, -10rem);
+		width: 100%;
+		max-width: 50%;
 
-//		@include flex-pos(center, normal);
-//		flex-direction: column;
+		padding: 1rem 0;
+		padding-left: 5rem;
 
-//		width: 100%;
-//		max-width: 50%;
+		@include font;
+		font-weight: 500;
 
-//		padding-left: 5rem;
+		&::before {
+			position: absolute;
+			left: 0;
 
-//		&::before {
-//			position: absolute;
-//			left: 0;
+			@include box(100%);
+			max-width: 2.4rem;
 
-//			width: 2.4rem;
-//			height: 23.7rem;
+			background: center / contain no-repeat
+				url(../img/index/info-border.png);
 
-//			background: center / contain no-repeat
-//				url(../img/index/info-border.png);
+			content: '';
+		}
+	}
 
-//			content: '';
-//		}
-//	}
+	&__info {
+		width: 100%;
+		max-width: 33rem;
 
-//	&__info {
-//		width: 100%;
-//		max-width: 33rem;
+		margin: 0;
+		padding-top: 1.5rem;
 
-//		margin: 0;
-//		padding-top: 1.5rem;
+		font-size: $font-size-md;
+		line-height: $line-height-lg;
+	}
 
-//		font-size: $font-size-md;
-//		line-height: get-line-height('large');
-//	}
+	&__price {
+		@include flex-dir(column);
 
-//	&__price {
-//		@include flex-dir(column);
+		color: $secondary;
+		font-size: $font-size-md;
 
-//		color: get-theme-color('secondary');
-//		font-size: $font-size-md;
+		span {
+			width: 100%;
+		}
+	}
+}
 
-//		span {
-//			width: 100%;
-//		}
-//	}
-//}
+//SPAN
+.center {
+	padding-left: 1.5rem;
 
-////SPAN
-//.center {
-//	margin: 0.5rem 0;
-//	padding-left: 1.5rem;
+	font-size: $font-size-lg;
 
-//	font-size: $font-size-lg;
+	&::after {
+		margin-left: 0.5rem;
 
-//	&::after {
-//		margin-left: 0.5rem;
+		content: '\20BD';
+	}
+}
 
-//		content: '\20BD';
-//	}
-//}
-
-//.down {
-//	padding-left: 10rem;
-//}
+.down {
+	padding-left: 8rem;
+}
