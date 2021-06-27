@@ -3,7 +3,7 @@
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 html {
@@ -13,9 +13,6 @@ html {
 }
 
 body {
-	@include flex-dir(column);
-	box-sizing: border-box;
-
 	min-height: 100%;
 
 	@include font;

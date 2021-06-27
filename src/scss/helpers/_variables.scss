@@ -1,16 +1,17 @@
+//Color
 $white: #fff;
 $black: #000;
 $brown: #c7af8a;
 $yellow: #fbd407;
 $green: #5a8a1d;
 
-$theme-colors: (
-	'primary': $black,
-	'secondary': $brown,
-);
+$primary: $black;
+$secondary: $brown;
 
+//Font
 $font-family-primary: 'Montserrat', sans-serif;
 $font-family-secondary: 'BebasNeueCyrillic', sans-serif;
+
 $BebasNeueNotCyrillic: 'BebasNeue', sans-serif;
 $BebasNeueBook: 'BebasNeueBook', sans-serif;
 
@@ -19,17 +20,13 @@ $font-size-sm: $font-size-base * 1.25;
 $font-size-md: $font-size-base * 1.75;
 $font-size-lg: $font-size-base * 2.75;
 
-$font-weight: (
-	'normal': 400,
-	'medium': 500,
-	'bold': 700,
-);
+$font-weight-nl: 400;
+$font-weight-md: 500;
+$font-weight-bd: 700;
 
-$line-height: (
-	'base': 1,
-	'small': 1.25,
-	'large': 1.6,
-);
+$line-height-nl: 1;
+$line-height-md: 1.25;
+$line-height-lg: 1.75;
 
 $font-size-headings: (
 	h1: $font-size-base * 4.5,
@@ -40,4 +37,5 @@ $font-size-headings: (
 	h6: $font-size-base,
 );
 
+//TRANSITION
 $transition-time: 0.4s;

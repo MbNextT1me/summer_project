@@ -1,44 +1,46 @@
-//.page {
-//	@include relative();
+.page {
+	@include relative();
 
-//	&::before {
-//		@include absolute(0, 0, 0, 0);
-//		z-index: -1;
+	&::before {
+		@include absolute(0, 0, 0, 0);
+		z-index: -1;
 
-//		@include box(100%, 100vh);
+		@include box(100%, 100vh);
 
-//		background: center / cover no-repeat url('../img/index/index-bg.jpg');
-//		filter: grayscale(100%);
+		background: center / cover no-repeat url('../img/index/index-bg.jpg');
+		filter: grayscale(100%);
 
-//		content: '';
-//	}
-//}
+		content: '';
+	}
+}
 
-//.container {
-//	width: 100%;
-//	max-width: 192rem;
+.container {
+	width: 100%;
+	max-width: 192rem;
 
-//	margin: 0 auto;
+	margin: 0 auto;
 
-//	padding-right: 2rem;
-//}
+	padding: 0 2rem;
+}
 
-//.clean-link {
-//	&,
-//	&:hover,
-//	&:focus,
-//	&:active {
-//		color: inherit;
-//		text-decoration: none;
-//	}
-//}
+.user-select-none {
+	user-select: none;
+}
 
-//.user-select-none {
-//	user-select: none;
-//}
+.clean {
+	&-link {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
 
-//.title {
-//	margin: 0;
+	&-title {
+		margin: 0;
 
-//	font-weight: inherit;
-//}
+		font-weight: inherit;
+	}
+}

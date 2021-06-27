@@ -12,8 +12,8 @@ import config from '../config';
 
 const stylesBuild = () =>
 	src(config.src.scss, { sourcemaps: config.isDev })
-		.pipe(plumber())
 		.pipe(sassGlob())
+		.pipe(plumber())
 		.pipe(
 			scss({
 				includePaths: ['./node_modules'],
@@ -25,8 +25,8 @@ const stylesBuild = () =>
 			gulpif(
 				config.isProd,
 				cleanCss({
-					compatibility: 'ie8',
-					level: 2,
+					compatibility: 'ie11',
+					level: 1,
 				}),
 			),
 		)

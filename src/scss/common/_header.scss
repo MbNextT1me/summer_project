@@ -1,52 +1,56 @@
-//.header {
-//	width: 100%;
-//	max-width: 100%;
+.header {
+	position: fixed;
+	z-index: 10000;
 
-//	@include font($font-family-secondary);
-//	position: relative;
-//	z-index: 30000;
-//	text-transform: uppercase;
+	width: 100%;
+	max-width: 100%;
 
-//	&__inner {
-//		@include flex-pos(flex-end, normal);
-//		padding: 2.5rem 0;
-//	}
+	&__inner {
+		@include flex-pos(flex-end, normal);
+	}
+}
 
-//	&__nav {
-//		width: 100%;
-//		max-width: 50%;
-//		@include flex-pos(space-between, center);
-//	}
+.nav {
+	@include flex-pos(space-between, center);
 
-//	&__title {
-//		position: relative;
+	width: 100%;
+	max-width: 50%;
 
-//		&::after {
-//			@include absolute(115%, 100%, 0%, 50%);
+	padding: 2.5rem 0;
 
-//			@include box(0%, 0.4rem);
+	@include font($font-family-secondary);
 
-//			background-color: $green;
+	&__title {
+		position: relative;
 
-//			transition: all $transition-time ease-in-out;
+		&::after {
+			@include absolute(115%, 100%, 0%, 50%);
 
-//			content: '';
-//		}
-//	}
+			@include box(0%, 0.3rem);
 
-//	&__link:hover &__title::after {
-//		left: 0;
+			background-color: $green;
 
-//		width: 100%;
-//	}
+			opacity: 0;
 
-//	&__phone {
-//		padding: 1rem;
+			transition: all $transition-time ease-in-out;
 
-//		font-family: $BebasNeueNotCyrillic;
+			content: '';
+		}
+	}
 
-//		cursor: pointer;
+	&__link:hover &__title::after {
+		left: 0;
 
-//		@include border(0.1rem, solid, get-theme-color('secondary'), 1rem);
-//	}
-//}
+		width: 100%;
+
+		opacity: 1;
+	}
+
+	&__phone {
+		padding: 1rem;
+
+		font-family: $BebasNeueNotCyrillic;
+
+		@include border(0.2rem, solid, $secondary, 1rem);
+	}
+}
