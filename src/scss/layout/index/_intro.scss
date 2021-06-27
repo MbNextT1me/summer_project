@@ -1,3 +1,31 @@
+.intro {
+	padding-top: $header-height;
+
+	&__inner {
+		position: absolute;
+		right: 0;
+
+		width: 100%;
+		max-width: 50%;
+
+		font-family: $BebasNeueBook;
+	}
+
+	&__title {
+		@include relative(0, 2.5rem);
+	}
+
+	&__image {
+		margin-top: $intro-img-mg-top;
+		@include relative(0, 9.5rem);
+	}
+
+	&__subtitle {
+		margin-top: $intro-img-mg-bottom;
+		padding-left: 11.5rem;
+	}
+}
+
 //.intro {
 //	@include font($BebasNeueBook);
 

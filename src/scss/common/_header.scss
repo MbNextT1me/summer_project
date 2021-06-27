@@ -2,8 +2,11 @@
 	position: fixed;
 	z-index: 10000;
 
-	width: 100%;
+	@include box(100%);
 	max-width: 100%;
+	max-height: $header-height;
+
+	@include flex-pos(normal, center);
 
 	&__inner {
 		@include flex-pos(flex-end, normal);
@@ -15,8 +18,6 @@
 
 	width: 100%;
 	max-width: 50%;
-
-	padding: 2.5rem 0;
 
 	@include font($font-family-secondary);
 
