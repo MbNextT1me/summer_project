@@ -1,27 +1,25 @@
-//.deer {
-//	width: 96.5rem;
-//	height: 118.6rem;
+.deer {
+	z-index: 1000;
 
-//	mix-blend-mode: darken;
+	width: 89.9rem;
+	height: 110rem;
 
-//	&,
-//	&__video,
-//	&__img {
-//		@include absolute(0, 0, 0, 0);
-//	}
+	mix-blend-mode: darken;
 
-//	&__video,
-//	&__img {
-//		@include box(100%);
-//	}
+	&,
+	&__video,
+	&__img {
+		@include absolute(0, 0, 0, 0);
+	}
 
-//	&__video {
-//		object-fit: cover;
-//	}
+	&__video,
+	&__img {
+		@include box(100%);
 
-//	&__img {
-//		object-fit: cover;
+		object-fit: cover;
+	}
 
-//		mix-blend-mode: screen;
-//	}
-//}
+	&__img {
+		mix-blend-mode: screen;
+	}
+}
