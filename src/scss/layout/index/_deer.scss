@@ -1,5 +1,6 @@
 .deer {
 	position: absolute;
+	z-index: 5;
 
 	@include box(97.5rem, 120.6rem);
 
