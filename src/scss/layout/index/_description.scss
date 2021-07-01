@@ -1,15 +1,12 @@
 .description {
-	margin-top: 6rem;
+	margin-top: 10rem;
 
-	@include font();
-	font-weight: 500;
-
-	&__inner {
-		@include flex-pos(flex-end, normal);
+	.flex-end-wrapper {
+		padding-left: 25rem;
 	}
 
-	&__wrapper {
-		@include relative(0, -10rem);
+	&__inner {
+		position: relative;
 
 		@include flex-pos(center, normal);
 		flex-direction: column;
@@ -17,14 +14,18 @@
 		width: 100%;
 		max-width: 50%;
 
+		padding: 1rem 0;
 		padding-left: 5rem;
+
+		@include font($font-family-secondary);
+		font-weight: 500;
 
 		&::before {
 			position: absolute;
 			left: 0;
 
-			width: 2.4rem;
-			height: 23.7rem;
+			@include box(100%);
+			max-width: 2.4rem;
 
 			background: center / contain no-repeat
 				url(../img/index/info-border.png);
@@ -38,27 +39,26 @@
 		max-width: 33rem;
 
 		margin: 0;
-		padding-top: 1rem;
+		padding-top: 1.5rem;
 
 		font-size: $font-size-md;
-		line-height: get-line-height('large');
+		line-height: $line-height-lg;
 	}
 
 	&__price {
 		@include flex-dir(column);
 
-		color: get-theme-color('secondary');
+		color: $secondary;
 		font-size: $font-size-md;
 	}
 }
 
 //SPAN
 .center {
-	@include relative(0, -1.5rem);
-
-	margin: 0.5rem 0;
+	padding-left: 1.5rem;
 
 	font-size: $font-size-lg;
+	line-height: $line-height-md;
 
 	&::after {
 		margin-left: 0.5rem;
@@ -68,5 +68,5 @@
 }
 
 .down {
-	@include relative(0, -10rem);
+	padding-left: 8rem;
 }

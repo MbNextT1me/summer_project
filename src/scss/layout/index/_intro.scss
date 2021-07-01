@@ -1,32 +1,24 @@
 .intro {
-	@include font($BebasNeueBook);
+	padding-top: 17rem;
+
+	font-family: $BebasNeueBook;
 
 	&__inner {
-		@include flex-pos(flex-end, normal);
-	}
-
-	&__wrapper {
 		width: 100%;
 		max-width: 50%;
 	}
 
-	&__suptitle {
+	&__title {
 		@include relative(0, 2.5rem);
 	}
 
-	&__title {
-		@include relative(0, 9rem);
+	&__image {
+		margin-top: $intro-img-mg-top;
+		@include relative(0, 9.5rem);
 	}
 
 	&__subtitle {
-		@include relative(0, -11.5rem);
-	}
-
-	&__title svg {
-		width: 81.6rem;
-		height: 33.1rem;
-
-		margin-top: 1.5rem;
-		margin-bottom: 3.5rem;
+		margin-top: $intro-img-mg-bottom;
+		padding-left: 11.5rem;
 	}
 }

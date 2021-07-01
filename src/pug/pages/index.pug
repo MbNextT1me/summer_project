@@ -1,22 +1,45 @@
-section.deer
-	video.deer__video(src='video/index-bg.mp4', autoplay, loop, muted)
-	+img('img/index/deer.jpg').deer__img
+main.main
+	.deer
+		video.deer__video(src='video/index-bg.mp4', autoplay, loop, muted)
+		//-+img('img/index/deer.jpg').deer__img
 
-section.intro
-	.container
-		.intro__inner
-			.intro__wrapper
-				h2.title.intro__suptitle отель-заповедник
-				.intro__title
-					+icon-multi('title')
-				h1.title.intro__subtitle премиальный отдых в подмосковье
+	.intro
+		.container
+			.flex-end-wrapper
+				.intro__inner
+					h2.clean-title.intro__title отель-заповедник
+					img.intro__image(src='img/index/intro.svg', alt='')
+					h1.clean-title.intro__subtitle  премиальный отдых в подмосковье
 
-section.description
-	.container
-		.description__inner
-			.description__wrapper
-				.description__price
-					span.up от
-					span.center 5 500
-					span.down в сутки
-				p.description__info 4х разовое питание и all inclusive. Собственное подсобное хозяйство, бассейн, баня, конный двор, и контактный зоопарк.
+	.description
+		.container
+			.flex-end-wrapper
+				.description__inner
+					.description__price
+						span.up от
+						span.center 5 500
+						span.down в сутки
+					p.description__info 4х разовое питание и all inclusive. Собственное подсобное хозяйство, бассейн, баня, конный двор, и контактный зоопарк.
+
+.booking
+	.a
+		.wrapper
+			.booking__inner
+				h2.clean-title.booking__title бронирование номеров
+				.booking__item.booking__item--date
+					img.booking__img(src='img/common/small-calendar.png', alt='')
+					.booking__content
+						.booking__item-header Заезд
+						.booking__item-body 04.03.2019
+				.booking__item.booking__item
+					img.booking__img(src='img/common/small-calendar.png', alt='')
+					.booking__content
+						.booking__item-header Выезд
+						.booking__item-body 04.03.2019
+				.booking__item.booking__item
+					img.booking__img(src='img/common/user-2.png', alt='')
+					.booking__content.booking__content--guest
+						.booking__item-header Гости
+						.booking__item-body 1
+				button.clean-btn.booking__btn Найти номер
+				//-.booking__item.booking__item--date

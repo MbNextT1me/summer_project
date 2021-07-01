@@ -1,15 +1,18 @@
 .page {
-	@include relative();
+	position: relative;
 
-	@include box(100%, 100vh);
+	@include flex-dir(column);
+	align-items: center;
 
-	overflow: hidden;
+	width: 100%;
+	max-width: 100%;
 
 	&::before {
-		@include absolute(0, 0, 0, 0);
+		position: absolute;
+
 		z-index: -1;
 
-		@include box(inherit);
+		@include box(100%, 100vh);
 
 		background: center / cover no-repeat url('../img/index/index-bg.jpg');
 		filter: grayscale(100%);
@@ -24,25 +27,38 @@
 
 	margin: 0 auto;
 
-	padding-right: 3rem;
-}
-
-.clean-link {
-	&,
-	&:hover,
-	&:focus,
-	&:active {
-		color: inherit;
-		text-decoration: none;
-	}
+	padding: 0 3rem;
 }
 
 .user-select-none {
 	user-select: none;
 }
 
-.title {
-	margin: 0;
+.flex-end-wrapper {
+	@include flex-pos(flex-end, normal);
+}
 
-	font-weight: inherit;
+.clean {
+	&-link {
+		&,
+		&:hover,
+		&:focus,
+		&:active {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	&-title {
+		margin: 0;
+
+		font-weight: inherit;
+	}
+
+	&-btn {
+		padding: 0;
+		margin: 0;
+		border: none;
+		outline: none;
+	}
 }

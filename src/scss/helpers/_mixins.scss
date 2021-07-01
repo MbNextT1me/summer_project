@@ -3,7 +3,12 @@
 	height: $height;
 }
 
-@mixin border($width, $style: solid, $color: transparent, $border-radius: 0) {
+@mixin border(
+	$width: 0.1rem,
+	$style: solid,
+	$color: transparent,
+	$border-radius: 0
+) {
 	border-color: $color;
 	border-style: $style;
 	border-width: $width;
@@ -35,11 +40,11 @@
 
 @mixin font(
 	$font-family: $font-family-primary,
-	$font-weight: get-font-weight('normal'),
+	$font-weight: $font-weight-nl,
 	$font-size: $font-size-base,
 	$font-style: normal,
-	$font-color: get-theme-color('primary'),
-	$line-height: get-line-height('base')
+	$font-color: $primary,
+	$line-height: $line-height-nl
 ) {
 	color: $font-color;
 	font-weight: $font-weight;
@@ -84,36 +89,21 @@
 }
 
 @mixin transform($transforms) {
-	-webkit-transform: $transforms;
-	-moz-transform: $transforms;
-	-ms-transform: $transforms;
 	transform: $transforms;
 }
 
-// Rotate
 @mixin rotate($deg) {
 	@include transform(rotate(#{$deg}deg));
 }
 
-// Scale
 @mixin scale($scale) {
 	@include transform(scale($scale));
 }
 
-// Translate
 @mixin translate($x, $y) {
 	@include transform(translate($x, $y));
 }
 
-// Skew
 @mixin skew($x, $y) {
 	@include transform(skew(#{$x}deg, #{$y}deg));
-}
-
-// Transform Origin
-@mixin transform-origin($origin) {
-	-webkit-transform-origin: $origin;
-	-moz-transform-origin: $origin;
-	-ms-transform-origin: $origin;
-	transform-origin: $origin;
 }
