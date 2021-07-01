@@ -1,16 +1,17 @@
 mixin phone(phoneNumber)
-	h3(class='clean-title nav__phone')= phoneNumber
+	h3.clean-title.nav__phone= phoneNumber
 
 mixin navItem(content)
-	a(class='clean-link user-select-none nav__link', href='#')&attributes(attributes)
-		h3(class='clean-title nav__title')= content
+	a.clean-link.user-select-none.nav__link(href='#')&attributes(attributes)
+		h3.clean-title.nav__title= content
 
-.header
+header.header
 	.container
-		.header__inner
-			nav.nav
-				+navItem('об отеле')
-				+navItem('номера и цены')
-				+navItem('мероприятия')
-				+navItem('контакты')
-				+phone('+7 (495) 005-61-59')
+		.flex-end-wrapper
+			.header__inner
+				nav.nav
+					+navItem('об отеле')
+					+navItem('номера и цены')
+					+navItem('мероприятия')
+					+navItem('контакты')
+					+phone('+7 (495) 005-61-59')

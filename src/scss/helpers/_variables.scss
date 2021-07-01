@@ -9,8 +9,8 @@ $primary: $black;
 $secondary: $brown;
 
 //Font
-$font-family-primary: 'Montserrat', sans-serif;
-$font-family-secondary: 'BebasNeueCyrillic', sans-serif;
+$font-family-primary: 'BebasNeueCyrillic', sans-serif;
+$font-family-secondary: 'Montserrat', sans-serif;
 
 $BebasNeueNotCyrillic: 'BebasNeue', sans-serif;
 $BebasNeueBook: 'BebasNeueBook', sans-serif;
@@ -41,8 +41,9 @@ $font-size-headings: (
 $transition-time: 0.4s;
 
 //Size
-$header-height: 9rem;
+$header-height: 14rem;
+$booking-footer: 7.5rem;
 
 //Margin
-$intro-img-mg-top: 1.25rem;
+$intro-img-mg-top: 2rem;
 $intro-img-mg-bottom: $intro-img-mg-top * 2;

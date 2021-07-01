@@ -1,15 +1,11 @@
 .intro {
-	padding-top: $header-height;
+	padding-top: 17rem;
+
+	font-family: $BebasNeueBook;
 
 	&__inner {
 		width: 100%;
 		max-width: 50%;
-
-		font-family: $BebasNeueBook;
-	}
-
-	&__wrapper {
-		@include flex-pos(flex-end, normal);
 	}
 
 	&__title {

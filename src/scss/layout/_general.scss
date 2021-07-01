@@ -1,11 +1,15 @@
 .page {
 	position: relative;
 
+	@include flex-dir(column);
+	align-items: center;
+
 	width: 100%;
 	max-width: 100%;
 
 	&::before {
-		@include absolute(0, 0, 0, 0);
+		position: absolute;
+
 		z-index: -1;
 
 		@include box(100%, 100vh);
@@ -23,7 +27,7 @@
 
 	margin: 0 auto;
 
-	padding: 0 2rem;
+	padding: 0 3rem;
 }
 
 .user-select-none {

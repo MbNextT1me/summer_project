@@ -1,0 +1,40 @@
+.booking {
+	position: relative;
+	z-index: -1;
+
+	width: 100%;
+	max-width: 192rem;
+
+	margin-top: 8rem;
+
+	@include flex-pos(flex-end, normal);
+
+	&__inner {
+		width: 100%;
+		height: 100%;
+
+		background-color: $brown;
+
+		@include flex-pos(center, center);
+
+		&::before {
+			content: '';
+		}
+	}
+
+	//&::before {
+	//	content: '';
+	//	height: 100%;
+	//	width: 100%;
+
+	//	background-color: $brown;
+	//}
+}
+.wrapper {
+	width: 85%;
+
+	padding: 0.3rem 0;
+
+	border-top: 0.2rem solid $secondary;
+	border-bottom: 0.2rem solid $secondary;
+}

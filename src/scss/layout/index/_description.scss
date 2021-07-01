@@ -1,8 +1,8 @@
 .description {
-	margin-top: $intro-img-mg-bottom;
+	margin-top: 10rem;
 
 	.flex-end-wrapper {
-		padding-left: 30rem;
+		padding-left: 20rem;
 	}
 
 	&__inner {
@@ -17,7 +17,7 @@
 		padding: 1rem 0;
 		padding-left: 5rem;
 
-		@include font;
+		@include font($font-family-secondary);
 		font-weight: 500;
 
 		&::before {
@@ -50,10 +50,6 @@
 
 		color: $secondary;
 		font-size: $font-size-md;
-
-		span {
-			width: 100%;
-		}
 	}
 }
 
@@ -62,6 +58,7 @@
 	padding-left: 1.5rem;
 
 	font-size: $font-size-lg;
+	line-height: $line-height-md;
 
 	&::after {
 		margin-left: 0.5rem;

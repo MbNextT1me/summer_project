@@ -1,25 +1,13 @@
 .deer {
-	z-index: 1000;
+	position: absolute;
 
-	width: 89.9rem;
-	height: 110rem;
+	@include box(97.5rem, 120.6rem);
 
-	mix-blend-mode: darken;
+	mask-image: url(../img/index/deer.png);
 
-	&,
-	&__video,
-	&__img {
-		@include absolute(0, 0, 0, 0);
-	}
-
-	&__video,
-	&__img {
-		@include box(100%);
+	&__video {
+		@include box(99%, 100%);
 
 		object-fit: cover;
-	}
-
-	&__img {
-		mix-blend-mode: screen;
 	}
 }
