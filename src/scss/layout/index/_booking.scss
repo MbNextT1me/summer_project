@@ -18,7 +18,8 @@
 
 			@include box(50.8rem, 4.4rem);
 
-			background: center / contain no-repeat url(../img/index/border.png);
+			background: center / contain no-repeat
+				url(../img/index/booking-border.png);
 
 			content: '';
 		}
@@ -105,7 +106,8 @@
 
 			@include box(1.9rem);
 
-			background: center / contain no-repeat url(../img/common/user-2.png);
+			background: center / contain no-repeat
+				url(../img/common/small-user.png);
 
 			content: '';
 		}
