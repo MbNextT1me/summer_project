@@ -66,12 +66,16 @@
 		margin-left: 3rem;
 	}
 
+	&__item,
+	&__btn {
+		@include border;
+		border-radius: 0.5rem;
+	}
+
 	&__item {
 		padding: 1rem $form-item-horizontal-padding;
 
 		background-color: $white;
-		@include border;
-		border-radius: 0.4rem;
 
 		&:first-child {
 			margin-left: 0;
