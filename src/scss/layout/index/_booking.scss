@@ -8,143 +8,149 @@
 	max-width: 192rem;
 	margin-top: 4rem;
 
+	&__border {
+		width: 85%;
+		@include flex-pos(center, normal);
+
+		&::before,
+		&::after {
+			position: relative;
+
+			@include box(50.8rem, 4.4rem);
+
+			background: center / contain no-repeat url(../img/index/border.png);
+
+			content: '';
+		}
+
+		&::before {
+			top: 0.6rem;
+		}
+
+		&::after {
+			bottom: 0.6rem;
+
+			transform: rotate(180deg);
+		}
+	}
+
+	&__outer {
+		width: 100%;
+		padding: 0.3rem 0;
+
+		border-top: 0.2rem solid $secondary;
+		border-bottom: 0.2rem solid $secondary;
+	}
+
 	&__inner {
 		@include flex-pos(center, normal);
 
-		width: 100%;
+		width: inherit;
 		padding: 1rem;
 
 		background-color: $brown;
 	}
 
 	&__title {
-		display: flex;
-		align-items: center;
-		margin-right: 3rem;
+		@include flex-pos(normal, center);
 	}
+}
 
-	&__content {
-		@include flex-dir(column);
+.form {
+	@include flex-pos(center, normal);
 
-		&--guest {
-			align-items: center;
-		}
-	}
-
-	&__img {
-		margin-right: 1.5rem;
-	}
-
+	&,
+	&__item,
 	&__btn {
-		padding: 0 1.5rem;
-		@include font($font-family-secondary);
-		background-color: $yellow;
-		font-size: $font-size-md;
-		font-weight: 500;
-		transition: box-shadow 0.4s ease;
-
-		&:hover {
-			box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
-		}
+		margin-left: 3rem;
 	}
 
 	&__item {
-		position: relative;
-		@include font($font-family-secondary);
-		@include flex-pos(space-between, center);
-		margin-right: 3rem;
-		padding: 1rem 1.5rem;
+		padding: 1rem $form-item-horizontal-padding;
 
 		background-color: $white;
 		@include border;
 		border-radius: 0.4rem;
 
-		&:last-child {
-			margin-right: 0;
-		}
-
-		//&--guest {
-		//	align-items: center;
-
-		//	&::before {
-		//		position: absolute;
-		//		left: 0;
-
-		//		transform: translateX(50%);
-
-		//		@include box(1.9rem);
-
-		//		background: center / contain no-repeat
-		//			url(../img/common/user-2.png);
-
-		//		content: '';
-		//	}
-		//}
-
-		//&--date {
-		//	&::before {
-		//		position: absolute;
-		//		left: 0;
-
-		//		transform: translateX(50%);
-
-		//		@include box(2.3rem);
-
-		//		background: center / contain no-repeat
-		//			url(../img/common/small-calendar.png);
-
-		//		content: '';
-		//	}
-		//}
-
-		&-header {
-			margin-bottom: 0.2rem;
-
-			font-size: $font-size-sm;
-
-			color: $gray;
-		}
-
-		&-body {
-			font-size: $font-size-md;
+		&:first-child {
+			margin-left: 0;
 		}
 	}
-}
 
-.a {
-	width: 85%;
-	@include flex-pos(center, normal);
-
-	&::before {
+	&__label {
 		position: relative;
-		top: 0.6rem;
 
-		width: 50.8rem;
-		height: 4.4rem;
+		@include flex-pos(center, normal);
+		flex-direction: column;
 
-		content: '';
+		@include font($font-family-secondary);
+		color: $gray;
+		font-size: $font-size-sm;
 
-		background: center / contain no-repeat url(../img/index/border.png);
+		&--date::before {
+			position: absolute;
+			left: 0;
+
+			@include box(2.3rem);
+
+			background: center / contain no-repeat
+				url(../img/common/small-calendar.png);
+
+			content: '';
+		}
+
+		&--guest::before {
+			position: absolute;
+			left: 0;
+
+			@include box(1.9rem);
+
+			background: center / contain no-repeat url(../img/common/user-2.png);
+
+			content: '';
+		}
+
+		&--guest {
+			align-items: center;
+			padding-left: $guest-input-icon-w;
+		}
+
+		&--date {
+			padding-left: $date-input-icon-w;
+		}
 	}
 
-	&::after {
-		position: relative;
-		bottom: 0.6rem;
-		transform: rotate(180deg);
+	&__input {
+		margin-top: 0.3rem;
 
-		width: 50.8rem;
-		height: 4.4rem;
+		font-size: $font-size-md;
+		text-align: center;
 
-		content: '';
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+		}
 
-		background: center / contain no-repeat url(../img/index/border.png);
+		&--date {
+			width: $date-input-width;
+		}
+
+		&--guest {
+			width: $guest-input-width;
+		}
 	}
-}
 
-.wrapper {
-	width: 100%;
-	padding: 0.3rem 0;
+	&__btn {
+		padding: 0 $form-item-horizontal-padding;
 
-	border-top: 0.2rem solid $secondary;
-	border-bottom: 0.2rem solid $secondary;
+		@include font($font-family-secondary, $font-weight-md, $font-size-md);
+
+		background-color: $yellow;
+
+		transition: box-shadow $transition-time ease;
+
+		&:hover {
+			box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.2);
+		}
+	}
 }
