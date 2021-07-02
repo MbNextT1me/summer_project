@@ -41,10 +41,15 @@ $font-size-headings: (
 //TRANSITION
 $transition-time: 0.4s;
 
-//Size
-$header-height: 14rem;
-$booking-footer: 7.5rem;
-
 //Margin
 $intro-img-mg-top: 2rem;
 $intro-img-mg-bottom: $intro-img-mg-top * 2;
+
+// Padding
+$form-item-horizontal-padding: 1.5rem;
+
+//Size
+$date-input-width: 9rem;
+$date-input-icon-w: $form-item-horizontal-padding + 2.3;
+$guest-input-width: 3.5rem;
+$guest-input-icon-w: $form-item-horizontal-padding + 1.9;

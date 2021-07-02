@@ -51,14 +51,28 @@
 
 	&-title {
 		margin: 0;
+		padding: 0;
 
 		font-weight: inherit;
 	}
 
 	&-btn {
-		padding: 0;
 		margin: 0;
+		padding: 0;
+
 		border: none;
 		outline: none;
+	}
+
+	&-input {
+		width: auto;
+		margin: 0;
+		padding: 0;
+
+		border: 0;
+
+		&:focus {
+			outline: none;
+		}
 	}
 }
