@@ -9,25 +9,30 @@
 
 	&::before {
 		position: absolute;
+		top: 0;
+		left: 0;
 
 		z-index: -1;
 
 		@include box(100%, 100vh);
 
 		background: center / cover no-repeat url('../img/index/index-bg.jpg');
-		filter: grayscale(100%);
 
 		content: '';
+	}
+
+	&-lock {
+		overflow: hidden;
 	}
 }
 
 .container {
 	width: 100%;
-	max-width: 192rem;
+	max-width: 1920px;
 
 	margin: 0 auto;
 
-	padding: 0 3rem;
+	padding: 0 30px;
 }
 
 .user-select-none {
@@ -36,6 +41,7 @@
 
 .flex-end-wrapper {
 	@include flex-pos(flex-end, normal);
+	width: 100%;
 }
 
 .clean {

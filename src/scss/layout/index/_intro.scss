@@ -6,19 +6,61 @@
 	&__inner {
 		width: 100%;
 		max-width: 50%;
+
+		@include for-size(1750) {
+			@include flex-pos(center);
+
+			max-width: 100%;
+		}
 	}
 
 	&__title {
 		@include relative(0, 2.5rem);
+
+		@include for-size(1750) {
+			right: 0;
+
+			padding-left: 70px;
+		}
+
+		@include for-size(992) {
+			margin-bottom: 4rem;
+			padding: 0;
+
+			text-align: center;
+		}
 	}
 
-	&__image {
+	&__img {
 		margin-top: $intro-img-mg-top;
 		@include relative(0, 9.5rem);
+
+		@include for-size(1750) {
+			right: 0;
+		}
+
+		@include for-size(992) {
+			margin-top: 0;
+		}
 	}
 
 	&__subtitle {
 		margin-top: $intro-img-mg-bottom;
 		padding-left: 11.5rem;
+
+		@include for-size(1750) {
+			padding-left: 205px;
+		}
+
+		@include for-size(992) {
+			display: none;
+		}
+	}
+
+	@include for-size(1750) {
+		@include flex-pos(center, center);
+
+		height: 100vh;
+		padding: 0;
 	}
 }
