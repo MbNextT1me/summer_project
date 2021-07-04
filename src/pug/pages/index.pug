@@ -1,24 +1,27 @@
 main.main
-	.deer
-		video.deer__video(src='video/index-bg.mp4', autoplay, loop, muted)
-
 	.intro
 		.container
 			.flex-end-wrapper
 				.intro__inner
-					h2.clean-title.intro__title отель-заповедник
-					img.intro__image(src='img/index/intro-text.svg', alt='')
-					h1.clean-title.intro__subtitle  премиальный отдых в подмосковье
+					.wrapper
+						h2.clean-title.intro__title отель-заповедник
+						img.intro__img(src='img/index/intro-text.svg', alt='')
+						h1.clean-title.intro__subtitle  премиальный отдых в подмосковье
+
+	.deer
+		video.deer__video(src='video/index-bg.mp4', autoplay, loop, muted)
 
 	.description
 		.container
 			.flex-end-wrapper
 				.description__inner
-					.description__price
-						span.up от
-						span.center 5 500
-						span.down в сутки
-					p.description__info 4х разовое питание и all inclusive. Собственное подсобное хозяйство, бассейн, баня, конный двор, и контактный зоопарк.
+					img.description__img(src='img/index/small-deer.png', alt='')
+					.description__info
+						.description__price
+							span.up от
+							span.center 5 500
+							span.down в сутки
+						p.description__about 4х разовое питание и all inclusive. Собственное подсобное хозяйство, бассейн, баня, конный двор, и контактный зоопарк.
 
 .booking
 	.booking__border
@@ -35,4 +38,4 @@ main.main
 					.form__item
 						label.form__label.form__label--guest Гости
 							input.clean-input.form__input.form__input--guest(type='number', maxlength='2', value='1')
-					button.clean-btn.form__btn(type='submit') Найти номер
+				button.clean-btn.form__btn(type='submit') Найти номер

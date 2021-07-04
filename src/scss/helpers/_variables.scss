@@ -5,6 +5,10 @@ $brown: #c7af8a;
 $yellow: #fbd407;
 $green: #5a8a1d;
 $gray: #7d7d7d;
+$dark-green: #c3bb7a;
+
+$white-600: rgba(255, 255, 255, 0.6);
+$black-100: rgba(0, 0, 0, 0.1);
 
 $primary: $black;
 $secondary: $brown;
@@ -44,6 +48,7 @@ $transition-time: 0.4s;
 //Margin
 $intro-img-mg-top: 2rem;
 $intro-img-mg-bottom: $intro-img-mg-top * 2;
+$description-mg: 7rem;
 
 // Padding
 $form-item-horizontal-padding: 1.5rem;

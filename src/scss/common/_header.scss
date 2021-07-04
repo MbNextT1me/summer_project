@@ -1,13 +1,52 @@
 .header {
 	position: fixed;
+	top: 0;
+	left: 0;
 	z-index: 10000;
 
 	width: 100%;
+	padding-top: 7rem;
 
 	&__inner {
 		width: 100%;
 		max-width: 50%;
-		padding-top: 7rem;
+
+		@include for-size(1750) {
+			max-width: 100%;
+		}
+
+		@include for-size(768) {
+			@include flex-pos(space-between, center);
+		}
+	}
+
+	&__logo {
+		z-index: 50;
+
+		display: none;
+		width: 50px;
+
+		@include for-size(768) {
+			display: block;
+		}
+	}
+
+	&-scroll {
+		padding: 1rem 0 !important;
+
+		background-color: $white-600;
+
+		transition: all $transition-time linear;
+	}
+
+	@include for-size(1175) {
+		padding-top: 3rem;
+	}
+
+	@include for-size(768) {
+		padding: 1rem 0 !important;
+
+		background-color: $dark-green;
 	}
 }
 
@@ -23,12 +62,16 @@
 			@include box(0, 0.3rem);
 
 			background-color: $green;
-			box-shadow: 0 -1.5rem 2rem 1rem rgba(0, 0, 0, 0.1);
+			box-shadow: 0 -1.5rem 2rem 1rem $black-100;
 			opacity: 0;
 
 			transition: all $transition-time ease-in-out;
 
 			content: '';
+		}
+
+		@include for-size(768) {
+			margin-top: 50px;
 		}
 	}
 
@@ -45,6 +88,107 @@
 
 		font-family: $BebasNeueNotCyrillic;
 
-		@include border(0.1rem, solid, $secondary, 1rem);
+		@include border(1px, solid, $secondary, 10px);
+
+		@include for-size(768) {
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+
+			padding: 10px;
+
+			@include border(2px, solid, $black, 10px);
+
+			@include translate(-50%, 0);
+		}
+	}
+
+	&-active {
+		top: 0 !important;
+	}
+
+	@include for-size(1750) {
+		justify-content: space-evenly;
+	}
+
+	@include for-size(992) {
+		justify-content: space-between;
+	}
+
+	@include for-size(768) {
+		position: fixed;
+		top: -100%;
+		left: 0;
+		z-index: 30;
+
+		@include flex-pos(center, center);
+		flex-direction: column;
+
+		@include box(100%, 100vh);
+
+		background-color: $dark-green;
+
+		transition: all 0.8s ease;
+	}
+}
+
+.hamburger {
+	position: relative;
+	z-index: 50;
+
+	display: none;
+
+	@include box(30px, 20px);
+
+	@include for-size(768) {
+		display: block;
+	}
+
+	span {
+		position: absolute;
+		top: 9px;
+		left: 0;
+
+		@include box(100%, 2px);
+
+		background-color: $white;
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		left: 0;
+
+		@include box(100%, 2px);
+
+		background-color: $white;
+
+		transition: all 0.5s ease;
+
+		content: '';
+	}
+
+	&::before {
+		top: 0;
+	}
+
+	&::after {
+		bottom: 0;
+	}
+
+	&-open {
+		span {
+			display: none;
+		}
+		&::before {
+			top: 9px;
+
+			@include rotate(45);
+		}
+		&::after {
+			bottom: 9px;
+
+			@include rotate(-45);
+		}
 	}
 }

@@ -1,30 +1,69 @@
 .description {
-	margin-top: 10rem;
+	margin-top: $description-mg;
 
 	.flex-end-wrapper {
 		padding-left: 25rem;
+
+		@include for-size(1750) {
+			padding-left: 0;
+		}
 	}
 
 	&__inner {
 		position: relative;
 
-		@include flex-pos(center, normal);
-		flex-direction: column;
-
+		@include flex-pos(normal, center);
 		width: 100%;
 		max-width: 50%;
+
+		@include for-size(1750) {
+			justify-content: center;
+			max-width: 100%;
+		}
+
+		@include for-size(768) {
+			justify-content: space-evenly;
+		}
+	}
+
+	&__img {
+		display: none;
+
+		@include for-size(1750) {
+			display: block;
+			margin-right: 110px;
+		}
+
+		@include for-size(992) {
+			margin-right: 80px;
+		}
+
+		@include for-size(768) {
+			margin-right: 0;
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__info {
+		position: relative;
+
+		@include flex-pos(center, normal);
+		flex-direction: column;
 		padding: 1rem 0;
-		padding-left: 5rem;
+		padding-left: 50px;
 
 		@include font($font-family-secondary);
 		font-weight: 500;
 
 		&::before {
 			position: absolute;
+			top: 50%;
 			left: 0;
 
+			@include translate(0, -50%);
+
 			@include box(100%);
-			max-width: 2.4rem;
+			max-width: 23px;
 
 			background: center / contain no-repeat
 				url(../img/index/info-border.png);
@@ -33,10 +72,9 @@
 		}
 	}
 
-	&__info {
+	&__about {
 		width: 100%;
 		max-width: 33rem;
-
 		margin: 0;
 		padding-top: 1.5rem;
 
@@ -54,18 +92,18 @@
 
 //SPAN
 .center {
-	padding-left: 1.5rem;
+	padding-left: 15px;
 
 	font-size: $font-size-lg;
 	line-height: $line-height-md;
 
 	&::after {
-		margin-left: 0.5rem;
+		margin-left: 5px;
 
 		content: '\20BD';
 	}
 }
 
 .down {
-	padding-left: 8rem;
+	padding-left: 80px;
 }

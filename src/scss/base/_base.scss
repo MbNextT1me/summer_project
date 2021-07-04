@@ -10,6 +10,14 @@ html {
 	height: 100%;
 
 	font-size: 62.5%;
+
+	@include for-size(1750) {
+		font-size: 56.25%;
+	}
+
+	@include for-size(992) {
+		font-size: 50%;
+	}
 }
 
 body {
@@ -28,5 +36,6 @@ img {
 @each $heading, $font-size in $font-size-headings {
 	#{$heading} {
 		font-size: $font-size;
+		text-transform: uppercase;
 	}
 }

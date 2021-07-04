@@ -5,7 +5,7 @@
 	@include flex-pos(flex-end, normal);
 
 	width: 100%;
-	max-width: 192rem;
+	max-width: 1920px;
 	margin-top: 4rem;
 
 	&__border {
@@ -16,44 +16,78 @@
 		&::after {
 			position: relative;
 
-			@include box(50.8rem, 4.4rem);
+			@include box(508px, 44px);
 
 			background: center / contain no-repeat
 				url(../img/index/booking-border.png);
 
 			content: '';
+
+			@include for-size(768) {
+				display: none;
+			}
 		}
 
 		&::before {
-			top: 0.6rem;
+			top: 6.5px;
 		}
 
 		&::after {
-			bottom: 0.6rem;
+			bottom: 7px;
 
-			transform: rotate(180deg);
+			@include rotate(180);
+		}
+
+		@include for-size(1750) {
+			width: 100%;
 		}
 	}
 
 	&__outer {
 		width: 100%;
-		padding: 0.3rem 0;
+		padding: 2px 0;
 
-		border-top: 0.2rem solid $secondary;
-		border-bottom: 0.2rem solid $secondary;
+		border-top: 3px solid $secondary;
+		border-bottom: 3px solid $secondary;
+
+		@include for-size(768) {
+			padding: 0;
+
+			border: none;
+		}
 	}
 
 	&__inner {
 		@include flex-pos(center, normal);
-
 		width: inherit;
 		padding: 1rem;
 
 		background-color: $brown;
+
+		@include for-size(768) {
+			flex-direction: column;
+
+			background-color: transparent;
+		}
+
+		@include for-size(768) {
+			padding: 0;
+		}
 	}
 
 	&__title {
-		@include flex-pos(normal, center);
+		@include flex-pos(center);
+
+		@include for-size(768) {
+			margin-bottom: 2rem;
+
+			letter-spacing: 0.3rem;
+		}
+	}
+
+	@include for-size(1750) {
+		max-width: 100%;
+		margin-top: $description-mg;
 	}
 }
 
@@ -64,6 +98,10 @@
 	&__item,
 	&__btn {
 		margin-left: 3rem;
+
+		@include for-size(768) {
+			margin-left: 0;
+		}
 	}
 
 	&__item,
@@ -80,6 +118,11 @@
 		&:first-child {
 			margin-left: 0;
 		}
+
+		@include for-size(768) {
+			@include border(1px, solid, $brown, 0.5rem);
+			margin-top: 15px;
+		}
 	}
 
 	&__label {
@@ -92,28 +135,29 @@
 		color: $gray;
 		font-size: $font-size-sm;
 
-		&--date::before {
+		&--date::before,
+		&--guest::before {
 			position: absolute;
+			top: 50%;
 			left: 0;
 
-			@include box(2.3rem);
-
-			background: center / contain no-repeat
-				url(../img/common/small-calendar.png);
+			@include translate(0, -50%);
 
 			content: '';
 		}
 
-		&--guest::before {
-			position: absolute;
-			left: 0;
+		&--date::before {
+			@include box(23px);
 
-			@include box(1.9rem);
+			background: center / contain no-repeat
+				url(../img/common/small-calendar.png);
+		}
+
+		&--guest::before {
+			@include box(19px);
 
 			background: center / contain no-repeat
 				url(../img/common/small-user.png);
-
-			content: '';
 		}
 
 		&--guest {
@@ -156,7 +200,17 @@
 		transition: box-shadow $transition-time ease;
 
 		&:hover {
-			box-shadow: 0 0 2rem 1rem rgba(0, 0, 0, 0.2);
+			box-shadow: 0 0 2rem 1rem $black-100;
 		}
+
+		@include for-size(768) {
+			margin-top: 3rem;
+
+			padding: 3rem 0;
+		}
+	}
+
+	@include for-size(768) {
+		justify-content: space-evenly;
 	}
 }

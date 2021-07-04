@@ -1,14 +1,33 @@
 .deer {
 	position: absolute;
+	top: 0;
+	left: 0;
 	z-index: 5;
 
 	@include box(97.5rem, 120.6rem);
 
-	mask-image: url(../img/index/deer.png);
+	mask-image: url(../img/index/big-deer.png);
 
 	&__video {
-		@include box(99%, 100%);
+		@include box(99%);
 
 		object-fit: cover;
+
+		@include for-size(1750) {
+			@include box(100%);
+			max-width: 1200px;
+			max-height: 720px;
+
+			object-fit: contain;
+		}
+	}
+
+	@include for-size(1750) {
+		mask-image: none;
+
+		position: relative;
+
+		@include flex-pos(center);
+		@include box(100%);
 	}
 }

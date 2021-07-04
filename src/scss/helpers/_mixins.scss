@@ -31,7 +31,7 @@
 	flex-wrap: wrap;
 }
 
-@mixin flex-pos($justify-content, $align-items) {
+@mixin flex-pos($justify-content, $align-items: $justify-content) {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: $align-items;
@@ -106,4 +106,29 @@
 
 @mixin skew($x, $y) {
 	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+@mixin for-size($resolution) {
+	@if $resolution == 1750 {
+		@media only screen and (max-width: 1750px) {
+			@content;
+		}
+	} @else if $resolution == 1175 {
+		@media only screen and (max-width: 1175px) {
+			@content;
+		}
+		@content;
+	} @else if $resolution == 992 {
+		@media only screen and (max-width: 992px) {
+			@content;
+		}
+	} @else if $resolution == 768 {
+		@media only screen and (max-width: 768px) {
+			@content;
+		}
+	} @else if $resolution == 480 {
+		@media only screen and (max-width: 480px) {
+			@content;
+		}
+	}
 }
