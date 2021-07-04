@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 5;
+	z-index: 20;
 
 	@include box(97.5rem, 120.6rem);
 
@@ -18,7 +18,7 @@
 			max-width: 1200px;
 			max-height: 720px;
 
-			object-fit: contain;
+			object-fit: cover;
 		}
 	}
 

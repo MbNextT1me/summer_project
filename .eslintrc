@@ -24,6 +24,11 @@
 		"no-tabs": 0,
 		"implicit-arrow-linebreak": 0,
 		"object-curly-newline": 0,
-		"no-console": 0
+		"no-console": 0,
+		"no-restricted-syntax":"off",
+		"prefer-arrow-callback": "off",
+		"func-names": "off",
+		"no-plusplus": "off",
+		"no-use-before-define": "off"
 	}
 }

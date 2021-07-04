@@ -1,0 +1,13 @@
+#myCanvas {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+
+	@include box(1920px, 200px);
+	max-width: 100%;
+
+	@include for-size(1750) {
+		display: none;
+	}
+}

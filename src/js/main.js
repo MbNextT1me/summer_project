@@ -1,10 +1,13 @@
 import lazyImages from './modules/lazyImages';
 import documentReady from './helpers/documentReady';
+import supportIE from './modules/supportIE';
 
 documentReady(() => {
+	supportIE();
 	lazyImages();
 });
 
+// Effects
 document.addEventListener('scroll', () => {
 	const header = document.querySelector('.header');
 

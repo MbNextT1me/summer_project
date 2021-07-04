@@ -10,18 +10,14 @@
 	src: url('../fonts/Montserrat/Montserrat-Medium.ttf');
 }
 
-//BebasNeue
+//Oswald
 @font-face {
-	font-family: 'BebasNeueCyrillic';
-	src: url('../fonts/Bebas_Neue/BebasNeueCyrillic-Regular.ttf');
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald/Oswald-Regular.ttf');
 }
 
 @font-face {
-	font-family: 'BebasNeue';
-	src: url('../fonts/Bebas_Neue/BebasNeue-Regular.ttf');
-}
-
-@font-face {
-	font-family: 'BebasNeueBook';
-	src: url('../fonts/Bebas_Neue/BebasNeueBook.ttf');
+	font-weight: 300;
+	font-family: 'Oswald';
+	src: url('../fonts/Oswald/Oswald-Light.ttf');
 }

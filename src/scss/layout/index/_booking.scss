@@ -1,12 +1,13 @@
 .booking {
 	position: relative;
-	z-index: 2;
+	z-index: 10;
 
 	@include flex-pos(flex-end, normal);
 
 	width: 100%;
 	max-width: 1920px;
 	margin-top: 4rem;
+	margin-bottom: 6rem;
 
 	&__border {
 		width: 85%;
@@ -88,6 +89,8 @@
 	@include for-size(1750) {
 		max-width: 100%;
 		margin-top: $description-mg;
+
+		margin-bottom: 0;
 	}
 }
 
@@ -97,7 +100,7 @@
 	&,
 	&__item,
 	&__btn {
-		margin-left: 3rem;
+		margin-left: 2rem;
 
 		@include for-size(768) {
 			margin-left: 0;
@@ -191,6 +194,7 @@
 	}
 
 	&__btn {
+		//margin-top: 2rem;
 		padding: 0 $form-item-horizontal-padding;
 
 		@include font($font-family-secondary, $font-weight-md, $font-size-md);
@@ -200,12 +204,11 @@
 		transition: box-shadow $transition-time ease;
 
 		&:hover {
-			box-shadow: 0 0 2rem 1rem $black-100;
+			box-shadow: 0 0 2rem 1rem $black-200;
 		}
 
 		@include for-size(768) {
-			margin-top: 3rem;
-
+			margin-top: 2rem;
 			padding: 3rem 0;
 		}
 	}
