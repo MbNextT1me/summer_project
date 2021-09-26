@@ -22,7 +22,7 @@
 			background: center / contain no-repeat
 				url(../img/index/booking-border.png);
 
-			content: '';
+			content: "";
 
 			@include for-size(768) {
 				display: none;
@@ -83,6 +83,7 @@
 			margin-bottom: 2rem;
 
 			letter-spacing: 0.3rem;
+			text-align: center;
 		}
 	}
 
@@ -146,7 +147,7 @@
 
 			@include translate(0, -50%);
 
-			content: '';
+			content: "";
 		}
 
 		&--date::before {
